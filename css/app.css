@@ -1,46 +1,110 @@
-* {
-  margin: 0;
-  padding: 0;
+/* **************Variables************* */
+:root {
+  --color-principal: #d90062;
+  --color-principal-atenuado: rgba(217, 0, 98, 0.75);
+  --color-secundario: #14192d;
+  --color-secundario-atenuado: rgba(20, 25, 45, 0.75);
+  --color-terciario: #501464;
+  --color-terciario-atenuado: rgba(80, 20, 100, 0.75);
+  --color-fondo-1: -webkit-linear-gradient(to left, #3a7bd5, #00d2ff);
+  --color-fondo-2: linear-gradient(to right, #3a7bd5,
+      #00d2ff);
+  --color-blanco: #fff;
+  --color-gris-1: #f3f3f3;
+  --color-gris-2: #ccc;
+  --color-gris-3: #666;
+  --color-negro: #000;
+  --color-enlace: #509ee3;
+  --color-titulo-principal: #333;
+  --color-titulo-secundario: rgba(255, 255, 255, 0.5);
+  --color-parrafo: #222;
+  --fuente: 'Oswald', sans-serif;
+  --margin-automatico: 0, auto;
+  --max-width-escritorio: 1200px;
+  --max-width-tablet: 720px;
+  --max-width-movil: 560px;
+  --tamanio-fuente-1: 16px;
+  --tamanio-fuente-2: 24px;
+  --tamanio-fuente-3: 32px;
+}
+
+/* **************Reseteador de Estilos************* */
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+html {
   box-sizing: border-box;
+  font-family: var(--fuente);
+  font-size: var(--tamanio-fuente-1);
+
+  scroll-behavior: smooth;
 }
 
 body {
-  font-size: 16px;
-  color: white;
- 
-}  
-.contenedor-general{
-    background-color: #2D728F;
-    background: #00d2ff;
-    background: -webkit-linear-gradient(
-      to right,
-      #3a7bd5,
-      #00d2ff
-    ); 
-    background: linear-gradient(
-      to right,
-      #3a7bd5,
-      #00d2ff
-    );
+  background: var(--color-fondo-2);
+  margin: 0;
+  overflow-x: hidden;
+  color: var(--color-blanco);
+
 }
 
+a {
+  color: var(--color-enlace);
+  transition: all 0.5s ease-out;
+}
 
-.contenedor-header {
+a:hover {
+  opacity: 0.75;
+}
+
+h1 {
+  font-size: calc(1.375rem + 1.5vw);
+  font-weight: 400;
+}
+
+h2 {
+  font-size: calc(1.325rem + 0.9vw);
+  font-weight: 400;
+}
+
+h3 {
+  font-size: calc(1.3rem + 0.6vw);
+}
+
+h4 {
+  font-size: calc(1.275rem + 0.3vw);
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+h6 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+/***********Vista Mobile******************/
+.contenedor-general {
+
+  max-width: 574px;
   height: 100vh;
   background-image: url(../img/fondo_mobile_home.svg);
-  background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  background-attachment: fixed;
-  position: relative;
-}
-.contenedor-header-nav{
-    width: 100%;
-    height: auto;
-}
-.contenedor-header-nav,.contenedor-header-nav>h1{
-    position: absolute;
-    left: 0.5rem;
-    bottom: 0;
-}
+  background-position: center;
 
+}
